@@ -5,6 +5,7 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+/build/img/social.pdn
 
 # Folder config file
 Desktop.ini
