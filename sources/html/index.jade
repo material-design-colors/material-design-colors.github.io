@@ -1,0 +1,37 @@
+doctype html
+html(lang="ru")
+    head
+        title Material design color palette demo
+        meta(charset="UTF-8")
+        meta(description="Material design color palette demo")
+        meta(keywords="Material, design, color, palette, demo, mdl")
+        link(rel='author', href='https://github.com/littleguga')
+        link(rel='stylesheet', href='build/css/style.min.css')
+        link(rel='stylesheet', href='build/material/material.min.css')
+        script(type='text/javascript' src='build/js/clipboard.min.js')
+        script(type='text/javascript' src='build/js/js.min.js')
+        script(type='text/javascript' src='build/material/material.min.js')
+    body
+        div.mdl-layout.mdl-js-layout
+            //.mdl-layout__header--scroll
+            header.mdl-layout__header.mdl-color--blue-grey
+                div.mdl-layout__header-row
+                    span.mdl-layout-title Material colors demo
+                    div.mdl-layout-spacer
+                    nav.mdl-navigation.mdl-layout--large-screen-only
+                        span.control-switch
+                            label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect(for='switch-display')
+                                input#switch-display.mdl-switch__input(type='checkbox')
+                                span.mdl-switch__label Vertical align
+                        span.control-switch
+                            label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect(for='switch-copy')
+                                input#switch-copy.mdl-switch__input(type='checkbox', checked=true)
+                                span.mdl-switch__label Copy classname
+                        a.mdl-navigation__link(href='https://www.google.com/design/spec/material-design/introduction.html#introduction-goals') Material Design Guide
+                        a.mdl-navigation__link(href='https://getmdl.io') Material Design Lite
+                        a.mdl-navigation__link(href='https://github.com/material-design-colors/material-design-colors.github.io') Star me on Github
+            div.mdl-layout__content.flex-center
+                div#container.container
+        div#info.info.invisible Just click on color block to copy it to the clipboard
+        //Unfortunately it was annoying
+        //a.github-button(href='')

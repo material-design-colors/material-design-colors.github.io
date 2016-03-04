@@ -1,0 +1,34 @@
+{
+  "name": "material-design-colors",
+  "version": "1.0.0",
+  "description": "Simple color palette demo for Google Material design lite",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/material-design-colors/material-design-colors.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/material-design-colors/material-design-colors.github.io/issues"
+  },
+  "homepage": "https://github.com/material-design-colors/material-design-colors.github.io",
+  "author": "littleguga",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "imagemin-pngquant": "^4.2.2"
+  },
+  "dependencies": {
+    "clipboard": "^1.5.9",
+    "material-design-lite": "^1.1.1"
+  }
+}
