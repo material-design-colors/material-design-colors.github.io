@@ -11,7 +11,4 @@
 
 ## Todo:
 
-* color/class/rgb slider
-* readme 
-* favicon
-* git
+* Please, somebody who have design skills - change colors of header to more pleasant 
