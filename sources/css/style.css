@@ -11,6 +11,10 @@ body{
     background-color: #fafafa
 }
 
+a:hover{
+    opacity: 0.8 !important;
+}
+
 .control-switch{
     padding: 0 24px;
 }
