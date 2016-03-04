@@ -57,6 +57,7 @@ window.onload = function () {
 
     each(blocks, function(block){
         var this_style = getComputedStyle(block);
+        block.setAttribute("data-color-rgb", this_style.backgroundColor);
         block.setAttribute("data-color-hex", rgb2hex(this_style.backgroundColor));
     });
 
