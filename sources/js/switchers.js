@@ -24,6 +24,7 @@ function switchDStyle(){
 
 //Copying switcher
 function switchCopy(){
+    clearTimeout(first_time);
     switch(this.getAttribute("data-option")){
         case "class":
             mess.set(mess.success.class);

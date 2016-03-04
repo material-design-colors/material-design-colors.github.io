@@ -31,6 +31,7 @@ var colors = {
     switcher_copy_hex, //used for switch hex copying
     switcher_copy_class, //used for switch class copying
     container, //used for html container
+    first_time, //used for first message timer
     info; //used for notifications
 
 window.onload = function () {
@@ -80,5 +81,10 @@ window.onload = function () {
 
     //Show hello info
     mess.show();
+
+    //Set message to default class
+    first_time = setTimeout(function(){
+        mess.set(mess.success.class);
+    }, 3300);
 };
 
