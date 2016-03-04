@@ -73,17 +73,6 @@ body{
     align-items: center !important;
 }
 
-.github-button{
-    position: fixed;
-    z-index: 999;
-    width: 149px;
-    height: 149px;
-    background: url('../img/github.png') center no-repeat;
-    bottom: 0;
-    right: 0;
-    border: 0;
-}
-
 .info{
     position: absolute;
     right: 30px;
