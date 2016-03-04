@@ -6,17 +6,17 @@ var mess = {
         "rgb": "RGB copied to your clipboard."
     },
     "timer": null,
-    hide: function(){
+    hide: function () {
         addClass(info, "invisible");
     },
-    show: function(){
+    show: function () {
         clearTimeout(mess.timer);
         removeClass(info, "invisible");
-        mess.timer = setTimeout(function(){
+        mess.timer = setTimeout(function () {
             mess.hide();
         }, 3000);
     },
-    set: function(text){
+    set: function (text) {
         info.textContent = text;
     }
 };

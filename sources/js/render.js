@@ -17,16 +17,16 @@ function pasteUsual(color) {
 function pasteExtended(color) {
     var this_colors = [];
     var extended = {
-        1000 : 700,
-        1100 : 400,
-        1200 : 200,
-        1300 : 100
+        1000: 700,
+        1100: 400,
+        1200: 200,
+        1300: 100
     };
 
     for (var i = 50; i < 1400; i = i + 100) {
-        if(i < 1000){
+        if (i < 1000) {
             this_colors.push("mdl-color--" + color + "-" + i);
-        }else{
+        } else {
             this_colors.push("mdl-color--" + color + "-A" + extended[i]);
         }
 

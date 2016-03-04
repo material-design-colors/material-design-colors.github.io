@@ -1,21 +1,21 @@
 //Displaying style switcher
-function switchDStyle(){
-    if(flag_vertical){
+function switchDStyle() {
+    if (flag_vertical) {
         removeClass(container, "flex-center");
         removeClass(container, "flex-vertical-center");
         removeClass(container, "container-vertical");
 
         //rows
-        each(rows, function(this_row){
+        each(rows, function (this_row) {
             addClass(this_row, "flex-center");
         });
-    }else{
+    } else {
         addClass(container, "flex-center");
         addClass(container, "flex-vertical-center");
         addClass(container, "container-vertical");
 
         //rows
-        each(rows, function(this_row){
+        each(rows, function (this_row) {
             removeClass(this_row, "flex-center");
         });
     }
@@ -23,9 +23,9 @@ function switchDStyle(){
 }
 
 //Copying switcher
-function switchCopy(){
+function switchCopy() {
     clearTimeout(first_time);
-    switch(this.getAttribute("data-option")){
+    switch (this.getAttribute("data-option")) {
         case "class":
             mess.set(mess.success.class);
             setCopy('data-color-class');
@@ -41,8 +41,8 @@ function switchCopy(){
     }
 }
 
-function setCopy(attr){
-    each(blocks, function(block){
+function setCopy(attr) {
+    each(blocks, function (block) {
         block.setAttribute('data-clipboard-text', block.getAttribute(attr));
     });
 }

@@ -61,7 +61,7 @@ window.onload = function () {
     rows = document.getElementsByClassName("row");
     blocks = document.getElementsByClassName("block");
 
-    each(blocks, function(block){
+    each(blocks, function (block) {
         var this_style = getComputedStyle(block);
         block.setAttribute("data-color-rgb", this_style.backgroundColor);
         block.setAttribute("data-color-hex", rgb2hex(this_style.backgroundColor));
@@ -70,11 +70,11 @@ window.onload = function () {
     //Activate copy to clipboard by click
     var clipboard = new Clipboard('.block');
 
-    clipboard.on('success', function() {
+    clipboard.on('success', function () {
         mess.show();
     });
 
-    clipboard.on('error', function() {
+    clipboard.on('error', function () {
         mess.set("Can't copy to clipboard. Please open an issue.");
         mess.show();
     });
@@ -83,7 +83,7 @@ window.onload = function () {
     mess.show();
 
     //Set message to default class
-    first_time = setTimeout(function(){
+    first_time = setTimeout(function () {
         mess.set(mess.success.class);
     }, 3300);
 };

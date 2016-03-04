@@ -8,8 +8,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
 
 //optional
-imagemin = require('gulp-imagemin'),
-pngquant = require('imagemin-pngquant');
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant');
 
 
 /* Sources */
@@ -32,10 +32,6 @@ var deps = {
 /* Destination folder */
 var DEST = 'build/';
 var DEST_html = '';
-
-
-
-
 
 
 /* Tasks */
