@@ -3,8 +3,15 @@ html(lang="ru")
     head
         title Material design color palette demo
         meta(charset="UTF-8")
-        meta(description="Material design color palette demo")
-        meta(keywords="Material, design, color, palette, demo, mdl")
+        meta(name='description', content="Material design color palette demo for developers and designers.")
+        meta(name='keywords', content="Material, design, color, palette, demo, mdl")
+        meta(property="og:type", content="website")
+        meta(property="og:title", content="Material design color palette demo")
+        meta(property="og:site_name", content="Material design color palette demo")
+        meta(property="og:url", content="//material-design-colors.github.io")
+        meta(property="og:description", content="Material design color palette demo for developers and designers.")
+        meta(property="og:image", content="build/img/social.png")
+        meta(property="og:image:type", content="image/png")
         link(rel='author', href='https://github.com/littleguga')
         link(rel='stylesheet', href='build/css/style.min.css')
         link(rel='stylesheet', href='build/material/material.min.css')
@@ -13,7 +20,7 @@ html(lang="ru")
         script(type='text/javascript' src='build/material/material.min.js')
         link(rel="shortcut icon", href="favicon.ico")
         link(rel="icon", sizes="16x16 32x32", href="favicon.ico")
-        link(rel="apple-touch-icon-precomposed", href="/build/img/152.png")
+        link(rel="apple-touch-icon-precomposed", href="build/img/152.png")
     body
         div.mdl-layout.mdl-js-layout
             header.mdl-layout__header.mdl-color--blue-grey
