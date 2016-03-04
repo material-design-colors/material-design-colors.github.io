@@ -23,12 +23,20 @@ html(lang="ru")
                                 input#switch-display.mdl-switch__input(type='checkbox')
                                 span.mdl-switch__label Vertical align
                         span.control-switch
-                            label.mdl-switch.mdl-js-switch.mdl-js-ripple-effect(for='switch-copy')
-                                input#switch-copy.mdl-switch__input(type='checkbox', checked=true)
-                                span.mdl-switch__label Copy classname
-                        a.mdl-navigation__link(href='https://www.google.com/design/spec/material-design/introduction.html#introduction-goals') Material Design Guide
+                            label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for="switch-copy-class")
+                                input#switch-copy-class.mdl-radio__button(type="radio", name="copy", data-option="class" checked=true)
+                                span.mdl-radio__label ClassName
+                        span.control-switch
+                            label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for="switch-copy-hex")
+                                input#switch-copy-hex.mdl-radio__button(type="radio", name="copy", data-option="hex")
+                                span.mdl-radio__label Color hex
+                        span.control-switch
+                            label.mdl-radio.mdl-js-radio.mdl-js-ripple-effect(for="switch-copy-rgb")
+                                input#switch-copy-rgb.mdl-radio__button(type="radio", name="copy", data-option="rgb")
+                                span.mdl-radio__label RGB
+                        a.mdl-navigation__link(href='https://www.google.com/design/spec/material-design/introduction.html#introduction-goals') Material Guide
                         a.mdl-navigation__link(href='https://getmdl.io') Material Design Lite
-                        a.mdl-navigation__link(href='https://github.com/material-design-colors/material-design-colors.github.io') Star me on Github
+                        a.mdl-navigation__link(href='https://github.com/material-design-colors/material-design-colors.github.io') Github
             div.mdl-layout__content.flex-center
                 div#container.container
         div#info.info.invisible Just click on color block to copy it to the clipboard

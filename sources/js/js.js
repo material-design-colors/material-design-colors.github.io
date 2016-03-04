@@ -26,9 +26,10 @@ var colors = {
     rows,
     blocks,
     flag_vertical = false, //flag used for switching display style
-    flag_copy_hex = false, //flag used for switching copying classname/hex-color
     switcher_display, //used for switch vertical/horizontal displaying
-    switcher_copy, //used for switch classname/color copying
+    switcher_copy_rgb, //used for switch rgb copying
+    switcher_copy_hex, //used for switch hex copying
+    switcher_copy_class, //used for switch class copying
     container, //used for html container
     info; //used for notifications
 
@@ -36,10 +37,14 @@ window.onload = function () {
     container = document.getElementById("container");
     info = document.getElementById("info");
     switcher_display = document.getElementById("switch-display");
-    switcher_copy = document.getElementById("switch-copy");
+    switcher_copy_rgb = document.getElementById("switch-copy-rgb");
+    switcher_copy_hex = document.getElementById("switch-copy-hex");
+    switcher_copy_class = document.getElementById("switch-copy-class");
 
     switcher_display.addEventListener("click", switchDStyle);
-    switcher_copy.addEventListener("click", switchCopy);
+    switcher_copy_class.addEventListener("click", switchCopy);
+    switcher_copy_hex.addEventListener("click", switchCopy);
+    switcher_copy_rgb.addEventListener("click", switchCopy);
 
     //Rendering color-blocks
     colors.extended.forEach(function (color) {
@@ -65,11 +70,6 @@ window.onload = function () {
     var clipboard = new Clipboard('.block');
 
     clipboard.on('success', function() {
-        if(flag_copy_hex){
-            mess.set(mess.success_hex);
-        }else{
-            mess.set(mess.success_class);
-        }
         mess.show();
     });
 

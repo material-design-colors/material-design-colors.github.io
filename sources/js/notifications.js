@@ -1,9 +1,11 @@
 //Notifications functions
 var mess = {
     "invisible": true,
-    "success": "",
-    "success_class": "Color class-name copied to your clipboard.",
-    "success_hex": "Color hex copied to your clipboard.",
+    "success": {
+        "class": "Color's class-name copied to your clipboard.",
+        "hex": "Color's hex copied to your clipboard.",
+        "rgb": "RGB copied to your clipboard."
+    },
     hide: function(){
         addClass(info, "invisible");
         mess.invisible = true;

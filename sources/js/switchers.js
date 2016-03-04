@@ -24,14 +24,24 @@ function switchDStyle(){
 
 //Copying switcher
 function switchCopy(){
-    if(flag_copy_hex){
-        each(blocks, function(block){
-            block.setAttribute('data-clipboard-text', block.getAttribute('data-color-class'));
-        });
-    }else{
-        each(blocks, function(block){
-            block.setAttribute('data-clipboard-text', block.getAttribute('data-color-hex'));
-        });
+    switch(this.getAttribute("data-option")){
+        case "class":
+            mess.set(mess.success.class);
+            setCopy('data-color-class');
+            break;
+        case "hex":
+            mess.set(mess.success.hex);
+            setCopy('data-color-hex');
+            break;
+        case "rgb":
+            mess.set(mess.success.rgb);
+            setCopy('data-color-rgb');
+            break;
     }
-    flag_copy_hex = !flag_copy_hex;
+}
+
+function setCopy(attr){
+    each(blocks, function(block){
+        block.setAttribute('data-clipboard-text', block.getAttribute(attr));
+    });
 }
