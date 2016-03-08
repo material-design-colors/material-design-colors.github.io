@@ -23,7 +23,6 @@ var colors = {
             "blue-grey"
         ]
     },
-    rows,
     blocks,
     flag_vertical = false, //flag used for switching display style
     flag_back = false, //flag used for switching back color
@@ -33,10 +32,9 @@ var colors = {
     switcher_copy_hex, //used for switch hex copying
     switcher_copy_class, //used for switch class copying
     container, //used for html container
-    first_time, //used for first message timer
     info; //used for notifications
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
     container = document.getElementById("container");
     info = document.getElementById("info");
     switcher_display = document.getElementById("switch-display");
@@ -62,7 +60,6 @@ window.onload = function () {
         pasteUsual(color);
     });
 
-    rows = document.getElementsByClassName("row");
     blocks = document.getElementsByClassName("block");
 
     each(blocks, function (block) {
@@ -74,21 +71,18 @@ window.onload = function () {
     //Activate copy to clipboard by click
     var clipboard = new Clipboard('.block');
 
-    clipboard.on('success', function () {
-        mess.show();
+    clipboard.on('success', function (sender) {
+        mess.showSuccess(sender.trigger);
     });
 
     clipboard.on('error', function () {
-        mess.set("Can't copy to clipboard. Please open an issue.");
-        mess.show();
+        mess.show(mess.text.fail);
     });
 
     //Show hello info
-    mess.show();
-
-    //Set message to default class
-    first_time = setTimeout(function () {
-        mess.set(mess.success.class);
-    }, 3300);
-};
+    //Really I don't know what I'm doing
+    setTimeout(function () {
+        mess.show(mess.text.hello);
+    }, 0);
+});
 

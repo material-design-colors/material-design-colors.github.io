@@ -11,5 +11,4 @@
 
 ## Todo:
 
-* Please, somebody who have design skills - change colors of header to more pleasant 
-* Snackbar
+* Please, somebody who have design skills - change colors of header to more pleasant

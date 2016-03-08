@@ -48,6 +48,7 @@ function paste(colors) {
         block.className = "block " + color;
         block.setAttribute('data-clipboard-text', color);
         block.setAttribute('data-color-class', color);
+        block.setAttribute('data-copy-type', "class");
         row.appendChild(block);
     });
 

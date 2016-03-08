@@ -3,7 +3,7 @@ function switchBack() {
     var back = document.getElementById("back");
     if (flag_back) {
         removeClass(back, "black");
-    }else{
+    } else {
         addClass(back, "black");
     }
     flag_back = !flag_back;
@@ -35,25 +35,22 @@ function switchDStyle() {
 
 //Copying switcher
 function switchCopy() {
-    clearTimeout(first_time);
     switch (this.getAttribute("data-option")) {
         case "class":
-            mess.set(mess.success.class);
-            setCopy('data-color-class');
+            setCopy('data-color-class', 'class');
             break;
         case "hex":
-            mess.set(mess.success.hex);
-            setCopy('data-color-hex');
+            setCopy('data-color-hex', 'hex');
             break;
         case "rgb":
-            mess.set(mess.success.rgb);
-            setCopy('data-color-rgb');
+            setCopy('data-color-rgb', 'rgb');
             break;
     }
 }
 
-function setCopy(attr) {
+function setCopy(attr, type) {
     each(blocks, function (block) {
         block.setAttribute('data-clipboard-text', block.getAttribute(attr));
+        block.setAttribute('data-copy-type', type);
     });
 }
