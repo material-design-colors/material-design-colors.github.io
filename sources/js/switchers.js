@@ -11,6 +11,7 @@ function switchBack() {
 
 //Displaying style switcher
 function switchDStyle() {
+    var rows = document.getElementsByClassName("row");
     if (flag_vertical) {
         removeClass(container, "flex-center");
         removeClass(container, "flex-vertical-center");
