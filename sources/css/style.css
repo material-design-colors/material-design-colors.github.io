@@ -110,3 +110,11 @@ a:hover{
 .invisible{
     opacity: 0;
 }
+
+.mdl-layout__content{
+    transition: 1s all;
+}
+
+.black{
+    background: black;
+}

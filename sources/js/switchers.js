@@ -1,3 +1,14 @@
+//Smooth gradient switcher
+function switchBack() {
+    var back = document.getElementById("back");
+    if (flag_back) {
+        removeClass(back, "black");
+    }else{
+        addClass(back, "black");
+    }
+    flag_back = !flag_back;
+}
+
 //Displaying style switcher
 function switchDStyle() {
     if (flag_vertical) {
