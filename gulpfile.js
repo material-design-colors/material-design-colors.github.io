@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     jsmin = require('gulp-jsmin'),
     jade = require('gulp-jade'),
     concat = require('gulp-concat'),
+    autoprefixer = require('gulp-autoprefixer'),
 
 //optional
     imagemin = require('gulp-imagemin'),
@@ -28,6 +29,8 @@ var deps = {
     }
 };
 
+
+var browsers_ver = ['not ie <= 9', 'iOS > 7'];
 
 /* Destination folder */
 var DEST = 'build/';
@@ -108,7 +111,10 @@ gulp.task('reloadCss', function () {
 //Build
 gulp.task('buildCss', function () {
     gulp.src(src_css)
-        .pipe(rename({suffix: '.min'}))
+        .pipe(autoprefixer({
+            browsers: browsers_ver,
+            cascade: false
+        }))
         .pipe(concat("style.min.css"))
         .pipe(cssmin())
         .pipe(gulp.dest(DEST + 'css'))
