@@ -9,11 +9,15 @@ var mess = {
         "fail": "Can't copy to clipboard. Please open an issue.",
         "hello": "Just click on color block to copy it to the clipboard"
     },
-    show: function (mess) {
+    show: function (mess, timeout) {
         'use strict';
         var data = {
             message: mess
         };
+
+        if (timeout) {
+            data.timeout = timeout;
+        }
         document.getElementById("info").MaterialSnackbar.showSnackbar(data);
     },
     showSuccess: function (sender) {
