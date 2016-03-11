@@ -64,8 +64,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     each(blocks, function (block) {
         var this_style = getComputedStyle(block);
+        var hex = rgb2hex(this_style.backgroundColor);
         block.setAttribute("data-color-rgb", this_style.backgroundColor);
-        block.setAttribute("data-color-hex", rgb2hex(this_style.backgroundColor));
+        block.setAttribute("data-color-hex", hex);
+
+        //Tooltips
+        block.setAttribute("id", hex.substr(1));
+        var tooltip = document.createElement('div');
+        tooltip.className = "mdl-tooltip mdl-tooltip--large";
+        tooltip.setAttribute("for", hex.substr(1));
+        tooltip.textContent = "Test";
+
+        insertAfter(tooltip, block);
     });
 
     //Activate copy to clipboard by click
