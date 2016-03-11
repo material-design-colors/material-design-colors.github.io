@@ -12,6 +12,7 @@
 ## Todo:
 
 * Please, somebody who have design skills - change colors of header to more pleasant
+* Add header menu for mobile devices and tablets with small screens
 
 ## Known issues:
 
