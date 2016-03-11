@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     clipboard.on('error', function (sender) {
         var copy = sender.trigger.getAttribute("data-clipboard-text");
-        mess.show(copy + " | " + mess.text.fail, 5000);
+        mess.show(copy, 5000);
+        console.log(mess.text.fail);
     });
 
     //Show hello info
