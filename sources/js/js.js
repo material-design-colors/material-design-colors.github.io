@@ -64,9 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     each(blocks, function (block) {
         var this_style = getComputedStyle(block);
-        var hex = rgb2hex(this_style.backgroundColor);
         block.setAttribute("data-color-rgb", this_style.backgroundColor);
-        block.setAttribute("data-color-hex", hex);
+        block.setAttribute("data-color-hex", rgb2hex(this_style.backgroundColor));
     });
 
     //Activate copy to clipboard by click
