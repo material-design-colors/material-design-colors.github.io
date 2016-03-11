@@ -74,6 +74,10 @@ a:hover{
     cursor: pointer;
 }
 
+.block:focus{
+    outline: none;
+}
+
 .block:active{
     opacity: .8;
 }
