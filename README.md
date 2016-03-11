@@ -12,3 +12,7 @@
 ## Todo:
 
 * Please, somebody who have design skills - change colors of header to more pleasant
+
+## Known issues:
+
+* Can't automatically copy to clipboard on iOS devices(Apple security politic) 
