@@ -122,3 +122,9 @@ a:hover{
 .black{
     background: black;
 }
+
+@media screen and (max-width: 1024px){
+    .mdl-layout__header {
+        display: flex !important;
+    }
+}
