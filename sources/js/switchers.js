@@ -15,7 +15,6 @@ function switchDStyle() {
     if (flag_vertical) {
         removeClass(container, "flex-center");
         removeClass(container, "flex-vertical-center");
-        removeClass(container, "container-vertical");
 
         //rows
         each(rows, function (this_row) {
@@ -24,7 +23,6 @@ function switchDStyle() {
     } else {
         addClass(container, "flex-center");
         addClass(container, "flex-vertical-center");
-        addClass(container, "container-vertical");
 
         //rows
         each(rows, function (this_row) {

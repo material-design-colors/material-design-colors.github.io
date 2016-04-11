@@ -11,6 +11,14 @@ body{
     background-color: #fafafa
 }
 
+.mdl-layout__header{
+    flex: 0 0 auto;
+}
+
+.mdl-layout__content{
+    flex: 1 0 auto;
+}
+
 a:hover{
     opacity: 0.8 !important;
 }
@@ -61,10 +69,6 @@ a:hover{
 
 .container{
     padding-top: 30px;
-}
-
-.container-vertical{
-    padding-top: 520px !important;
 }
 
 .block{
