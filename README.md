@@ -16,4 +16,4 @@
 
 ## Known issues:
 
-* Can't automatically copy to clipboard on iOS devices(Apple security politic) 
+* Can't automatically copy to clipboard on iOS devices(Apple security policy) 
